@@ -1,0 +1,19 @@
+.contactsBlock {
+    background-color: #9476bd;
+    height: 50vh;
+}
+
+.container {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.headerTitle {
+
+}
+
+.submitButton {
+    margin-top: 5px;
+    width: 80px;
+}

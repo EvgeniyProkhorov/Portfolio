@@ -1,0 +1,24 @@
+.project {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    border: 1px solid;
+    text-align: center;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed;
+    background-color: #8a67b0;
+}
+
+.projectName {
+
+}
+
+.description{
+
+}
