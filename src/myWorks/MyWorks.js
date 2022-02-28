@@ -16,6 +16,14 @@ const MyWorks = () => {
                              description={"Project on Typescript/React/Redux"}/>
                     <Project projectTitle={'React Pizza'}
                              description={"Project on Typescript/React/Redux"}/>
+                    <Project projectTitle={'Example 1'}
+                             description={"Project on Typescript/React/Redux"}/>
+                    <Project projectTitle={'Example 2'}
+                             description={"Project on Typescript/React/Redux"}/>
+                    <Project projectTitle={'Example 3'}
+                             description={"Project on Typescript/React/Redux"}/>
+                    <Project projectTitle={'Example 4'}
+                             description={"Project on Typescript/React/Redux"}/>
                 </div>
             </div>
         </div>
