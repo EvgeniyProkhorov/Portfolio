@@ -2,13 +2,14 @@ import React from "react";
 import css from './Contacts.module.css'
 import styleContainer from '../common/styles/Container.module.css'
 import Form from "./Form/Form";
+import {Title} from "../common/components/title/Title";
 
 
 const Contacts = () => {
     return (
         <div className={css.contactsBlock}>
             <div className={`${styleContainer.container} ${css.container}`}>
-                <h2 className={css.headerTitle}>Contacts</h2>
+                <Title title={'Contacts'}/>
                 <Form/>
                 <button className={css.submitButton}>Submit</button>
             </div>
