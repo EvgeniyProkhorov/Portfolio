@@ -2,13 +2,14 @@ import React from "react";
 import css from './MyWorks.module.css'
 import styleContainer from '../common/styles/Container.module.css'
 import Project from "./Project/Project";
+import Title from "../common/components/title/Title";
 
 
 const MyWorks = () => {
     return (
         <div className={css.worksBlock}>
             <div className={`${styleContainer.container} ${css.myWorksContainer}`}>
-                <h2 className={css.blockTitle}>My Works</h2>
+                <Title title={"My Works"}/>
                 <div className={css.projects}>
                     <Project projectTitle={'Social Network'}
                              description={"Project on Typescript/React/Redux"}/>
