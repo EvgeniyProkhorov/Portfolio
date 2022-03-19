@@ -1,21 +1,28 @@
 .project {
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     background-color: grey;
     border: 1px solid;
     text-align: center;
 }
 
 .image {
-    height: 100px;
-    width: 100px;
+    height: 300px;
     border: 1px dashed;
     background-color: #8a67b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.projectName {
+.viewBtn {
+    background-color: #eeeef5;
+    padding: 10px 20px;
+}
+
+.projectTitle {
 
 }
 
