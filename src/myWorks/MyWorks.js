@@ -14,7 +14,7 @@ const MyWorks = () => {
                     <Project projectTitle={'Social Network'}
                              description={"Project on Typescript/React/Redux"}/>
                     <Project projectTitle={'Todo List'}
-                             description={"Project on Typescript/React/Redux"}/>
+                             description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}/>
                     <Project projectTitle={'React Pizza'}
                              description={"Project on Typescript/React/Redux"}/>
                     <Project projectTitle={'Example 1'}

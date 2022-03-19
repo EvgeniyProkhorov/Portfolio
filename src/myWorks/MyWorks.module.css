@@ -16,8 +16,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 1130px) {
     .projects {
         justify-content: center;
     }

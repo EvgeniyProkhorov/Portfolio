@@ -8,8 +8,10 @@ const Project = (props) => {
             <div className={css.image}>
                 <a className={css.viewBtn}>Смотреть</a>
             </div>
-            <h3 className={css.projectTitle}>{props.projectTitle}</h3>
-            <span className={css.description}>{props.description}</span>
+            <div className={css.projectInfo}>
+                <h3 className={css.projectTitle}>{props.projectTitle}</h3>
+                <span className={css.description}>{props.description}</span>
+            </div>
         </div>
     )
 }
