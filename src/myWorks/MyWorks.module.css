@@ -1,5 +1,5 @@
 .worksBlock {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     background-color: lightgoldenrodyellow;
 }
 
@@ -19,4 +19,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+@media screen and (max-width: 754px) {
+    .projects {
+        justify-content: center;
+    }
 }
