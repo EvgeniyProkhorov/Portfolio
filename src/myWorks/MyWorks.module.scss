@@ -1,25 +1,24 @@
 .worksBlock {
-    /*min-height: 100vh;*/
-    background-color: #1d1b19;
-    padding: 100px 0;
-}
+  /*min-height: 100vh;*/
+  background-color: #1d1b19;
+  padding: 100px 0;
 
-.myWorksContainer {
+  .myWorksContainer {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+
+    .projects {
+      border: 1px solid;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      @media screen and (max-width: 1130px) {
+        justify-content: center;
+      }
+    }
+  }
 }
 
-.projects {
-    border: 1px solid;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-@media screen and (max-width: 1130px) {
-    .projects {
-        justify-content: center;
-    }
-}
