@@ -1,0 +1,32 @@
+@import '../common/styles/sass/variables';
+
+.contactsBlock {
+    background-color: #1d1b19;
+    /*height: 50vh;*/
+}
+
+.container {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.headerTitle {
+
+}
+
+.submitButton {
+    margin-top: 5px;
+    width: 100px;
+    color: $headersColor;
+    background-color: transparent;
+    border: 2px solid $dividerColor;
+    padding: 10px 20px;
+    transition: all .5s ease;
+}
+
+.submitButton:hover {
+    cursor: pointer;
+    color: $goldColor;
+    border: 2px solid $goldColor;
+}

@@ -1,3 +1,5 @@
+@import '../../common/styles/sass/variables';
+
 .formBlock {
     min-width: 50%;
     /*height: 150px;*/
@@ -29,10 +31,16 @@
     box-sizing: border-box;
     font-family: 'Jost','Arial','Helvetica',sans-serif;
     vertical-align: middle;
-    transition: all .3s ease;
+    transition: all .5s ease;
+
+}
+
+.input:focus {
+    border-color: $goldColor;
 }
 
 .textarea {
+    outline: none;
     height: 200px;
     border-radius: 1px;
     font-size: 16px;
@@ -44,8 +52,12 @@
     line-height: 1.5;
     padding: 16px 20px!important;
     width: 100%;
-    border: 1px solid rgba(255,255,255,.2);
-    transition: all .3s ease;
+    //border: 1px solid rgba(255,255,255,.2);
+    transition: all .5s ease;
+}
+
+.textarea:focus {
+    border-color: $goldColor;
 }
 
 @media screen and (max-width: 500px){

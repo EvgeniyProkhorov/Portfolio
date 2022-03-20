@@ -1,5 +1,5 @@
 import React from "react";
-import css from './Contacts.module.css'
+import css from './Contacts.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import Form from "./Form/Form";
 import {Title} from "../common/components/title/Title";
