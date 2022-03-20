@@ -5,7 +5,7 @@ import css from './Project.module.css'
 const Project = (props) => {
     return (
         <div className={css.project}>
-            <div className={css.image}>
+            <div className={css.image} style={props.style}>
                 <a className={css.viewBtn}>Смотреть</a>
             </div>
             <div className={css.projectInfo}>

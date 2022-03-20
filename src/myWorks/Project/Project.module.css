@@ -18,8 +18,15 @@
 }
 
 .viewBtn {
-    background-color: #eeeef5;
+    color: #ddd;
+    background-color: #181715;
+    border: 2px solid rgba(255, 255, 255, .2);
     padding: 10px 20px;
+}
+
+.viewBtn:hover {
+    color: #987750;
+    border: 2px solid #987750;
 }
 
 .projectInfo {
@@ -37,8 +44,8 @@
 
 }
 
-.description{
-    font-family: 'Jost','Arial','Helvetica',sans-serif;
+.description {
+    font-family: 'Jost', 'Arial', 'Helvetica', sans-serif;
     color: #888;
     font-size: 18px;
     font-weight: 400;
