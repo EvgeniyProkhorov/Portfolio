@@ -1,3 +1,5 @@
+@import '../common/styles/sass/variables';
+
 .mainBlock {
     min-height: 100vh;
     background-color: #1d1b19;
@@ -7,7 +9,7 @@
     width: 300px;
     font-family: 'Jost', sans-serif;
     /*background-color: grey;*/
-    background-color: #181715;
+    background-color: $mainBgColor;
     padding: 0;
     font-size: 18px;
     color: #999;
@@ -22,6 +24,6 @@
     width: 300px;
     height: 400px;
     /*background-color: grey;*/
-    background-color: #181715;
+    background-color: $secondBgColor;
 
 }

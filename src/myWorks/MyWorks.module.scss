@@ -1,6 +1,8 @@
+@import '../common/styles/sass/variables';
+
 .worksBlock {
   /*min-height: 100vh;*/
-  background-color: #1d1b19;
+  background-color: $mainBgColor;
   padding: 100px 0;
 
   .myWorksContainer {

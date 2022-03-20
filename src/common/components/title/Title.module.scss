@@ -1,5 +1,7 @@
+@import '../../../common/styles/sass/variables';
+
 .title {
-  color: #ddd;
+  color: $headersColor;
   font-family: 'Jost', sans-serif;
   line-height: 1.2;
   letter-spacing: 0;
@@ -18,7 +20,7 @@
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: $dividerColor;
     width: 150px;
     left: 50%;
     transform: translate(-50%, 50%);

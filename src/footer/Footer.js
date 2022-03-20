@@ -1,5 +1,5 @@
 import React from "react";
-import css from './Footer.module.css'
+import css from './Footer.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 
 

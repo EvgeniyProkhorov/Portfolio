@@ -1,8 +1,10 @@
+@import '../common/styles/sass/variables.scss';
+
 .footer {
     /*height: 30vh;*/
     min-width: 50%;
     /*background-color: darkcyan;*/
-    background-color: #1d1b19;
+    background-color: $mainBgColor;
 }
 
 .container {
