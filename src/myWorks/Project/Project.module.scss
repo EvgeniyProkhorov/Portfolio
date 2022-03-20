@@ -1,9 +1,11 @@
+@import '../../common/styles/sass/variables';
+
 .project {
   width: 450px;
   display: flex;
   flex-direction: column;
   /*align-items: center;*/
-  background-color: #181715;
+  background-color: $secondBgColor;
   border: 1px solid;
   text-align: center;
 
@@ -28,9 +30,9 @@
     }
 
     .viewBtn {
-      color: #ddd;
-      background-color: #181715;
-      border: 2px solid rgba(255, 255, 255, .2);
+      color: $headersColor;
+      background-color: $secondBgColor;
+      border: 2px solid $dividerColor;
       padding: 10px 20px;
       transition: all .5s ease;
       position: relative;
@@ -38,8 +40,8 @@
 
       &:hover {
         cursor: pointer;
-        color: #987750;
-        border: 2px solid #987750;
+        color: $goldColor;
+        border: 2px solid $goldColor;
       }
     }
   }
@@ -50,7 +52,7 @@
     .projectTitle {
       font-family: 'Jost', sans-serif;
       font-size: 30px;
-      color: #ddd;
+      color: $headersColor;
       margin: 0 0 18px;
       padding: 0;
       font-weight: 400;
@@ -59,7 +61,7 @@
 
     .description {
       font-family: 'Jost', 'Arial', 'Helvetica', sans-serif;
-      color: #888;
+      color: $textColor;
       font-size: 18px;
       font-weight: 400;
       line-height: 1.44;
