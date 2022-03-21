@@ -7,3 +7,10 @@
   line-height: $lineHeight;
   color: $color;
 }
+
+@mixin textWithoutFontWeight($fontFamily, $fontSize, $lineHeight, $color) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
