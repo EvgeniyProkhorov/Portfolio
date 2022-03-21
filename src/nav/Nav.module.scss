@@ -1,0 +1,19 @@
+@import '../common/styles/sass/variables';
+
+.nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .navBtn {
+    text-decoration: none;
+    color: $headersColor;
+    background-color: transparent;
+    transition: all .5s ease;
+    &:hover {
+      cursor: pointer;
+      color: $goldColor;
+    }
+  }
+}
