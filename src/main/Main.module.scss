@@ -1,29 +1,25 @@
 @import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
 
 .mainBlock {
-    min-height: 100vh;
-    background-color: #1d1b19;
-}
+  min-height: 100vh;
+  background-color: $mainBgColor;
 
-.text {
+  .text {
+    @include text($titleFontFamily, 18px, 500, 1.2, #999);
     width: 300px;
-    font-family: 'Jost', sans-serif;
     /*background-color: grey;*/
     background-color: $mainBgColor;
     padding: 0;
-    font-size: 18px;
-    color: #999;
-    font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 8px;
-    line-height: 1.2;
-
+  }
 }
 
 .photo {
-    width: 300px;
-    height: 400px;
-    /*background-color: grey;*/
-    background-color: $secondBgColor;
+  width: 300px;
+  height: 400px;
+  /*background-color: grey;*/
+  background-color: $secondBgColor;
 
 }
