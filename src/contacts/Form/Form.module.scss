@@ -1,67 +1,64 @@
 @import '../../common/styles/sass/variables';
 
 .formBlock {
-    min-width: 50%;
-    /*height: 150px;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+  min-width: 50%;
+  /*height: 150px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-.form {
+  .form {
     /*height: 100%;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
-.input {
-    width: 100%;
-    display: block;
-    border-radius: 1px;
-    background-color: transparent;
-    border: 1px solid rgba(255,255,255,.2);
-    color: #ccc;
-    font-size: 16px;
-    outline: none;
-    padding: 0 20px!important;
-    line-height: 70px;
-    height: 70px;
-    letter-spacing: .5px;
-    box-sizing: border-box;
-    font-family: 'Jost','Arial','Helvetica',sans-serif;
-    vertical-align: middle;
-    transition: all .5s ease;
+    .input {
+      width: 100%;
+      display: block;
+      border-radius: 1px;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: #ccc;
+      font-size: 16px;
+      outline: none;
+      padding: 0 20px !important;
+      line-height: 70px;
+      height: 70px;
+      letter-spacing: .5px;
+      box-sizing: border-box;
+      font-family: 'Jost', 'Arial', 'Helvetica', sans-serif;
+      vertical-align: middle;
+      transition: all .5s ease;
 
-}
-
-.input:focus {
-    border-color: $goldColor;
-}
-
-.textarea {
-    outline: none;
-    height: 200px;
-    border-radius: 1px;
-    font-size: 16px;
-    color: #ccc;
-    resize: vertical;
-    font-family: 'Jost','Arial','Helvetica',sans-serif;
-    background-color: transparent;
-    box-sizing: border-box;
-    line-height: 1.5;
-    padding: 16px 20px!important;
-    width: 100%;
-    //border: 1px solid rgba(255,255,255,.2);
-    transition: all .5s ease;
-}
-
-.textarea:focus {
-    border-color: $goldColor;
-}
-
-@media screen and (max-width: 500px){
-    .formBlock {
-        min-width: 100%;
+      &:focus {
+        border-color: $goldColor;
+      }
     }
+
+    .textarea {
+      outline: none;
+      height: 200px;
+      border-radius: 1px;
+      font-size: 16px;
+      color: #ccc;
+      resize: vertical;
+      font-family: 'Jost', 'Arial', 'Helvetica', sans-serif;
+      background-color: transparent;
+      box-sizing: border-box;
+      line-height: 1.5;
+      padding: 16px 20px !important;
+      width: 100%;
+      //border: 1px solid rgba(255,255,255,.2);
+      transition: all .5s ease;
+
+      &:focus {
+        border-color: $goldColor;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    min-width: 100%;
+  }
 }
