@@ -6,4 +6,7 @@
   align-items: center;
   height: 80px;
   background-color: $mainBgColor;
+  @media screen and (max-width: 749px) {
+    justify-content: center;
+  }
 }

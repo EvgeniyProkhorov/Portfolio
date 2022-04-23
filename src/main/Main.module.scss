@@ -3,22 +3,25 @@
 
 .mainBlock {
   min-height: 100vh;
+  @include flex(row, center, center, nowrap);
   background-color: $mainBgColor;
 
-  .text {
-    @include text($titleFontFamily, 18px, 500, 1.2, $headersColor);
-    width: 300px;
-    /*background-color: grey;*/
-    //background-color: $mainBgColor;
-    padding: 0;
-    text-transform: uppercase;
-    margin: 0 0 8px;
-  }
-}
+  .container {
+    @include container();
+    @include flex(row, center, center, wrap);
 
-.photo {
-  width: 300px;
-  height: 400px;
-  /*background-color: grey;*/
-  background-color: $secondBgColor;
+    .text {
+      @include text($titleFontFamily, 18px, 500, 1.2, $headersColor);
+      width: 300px;
+      padding: 0;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-color: $secondBgColor;
+    }
+  }
 }

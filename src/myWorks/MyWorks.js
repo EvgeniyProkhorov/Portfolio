@@ -1,6 +1,5 @@
 import React from "react";
 import css from './MyWorks.module.scss'
-import styleContainer from '../common/styles/Container.module.css'
 import Project from "./Project/Project";
 import {Title} from "../common/components/title/Title";
 import socialNet from "../assets/images/2_Building-Application-with-React-JS.png"
@@ -22,7 +21,7 @@ const MyWorks = () => {
 
     return (
         <div className={css.worksBlock}>
-            <div className={`${styleContainer.container} ${css.myWorksContainer}`}>
+            <div className={css.container}>
                 <Title title={"My Works"}/>
                 <div className={css.projects}>
                     <Project style={social}
