@@ -2,11 +2,13 @@
 @import '../common/styles/sass/mixins';
 
 .mainBlock {
+  position: relative;
   min-height: 100vh;
   @include flex(row, center, center, nowrap);
-  background-color: $mainBgColor;
+  //background-color: $mainBgColor;
 
   .container {
+    position: absolute;
     @include container();
     @include flex(row, space-between, center, wrap);
 

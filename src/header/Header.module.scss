@@ -1,12 +1,14 @@
 @import '../common/styles/sass/variables.scss';
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 80px;
+  width: 100%;
   background-color: rgba(24, 24, 22, 0.8);
   z-index: 1000;
   @media screen and (max-width: 749px) {
