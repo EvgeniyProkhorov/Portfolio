@@ -1,7 +1,8 @@
 @import '../common/styles/sass/variables';
 
 .hireBlock {
-  background-color: #1d1b19;
+  background-color: $secondBgColor;
+  padding: 100px 0;
   /*height: 20vh;*/
   .container {
     flex-direction: column;
@@ -11,7 +12,7 @@
     .hireButton {
       margin-top: 5px;
       width: 100px;
-      color: $headersColor;
+      color: $textColor;
       background-color: transparent;
       border: 2px solid $dividerColor;
       padding: 10px 5px;

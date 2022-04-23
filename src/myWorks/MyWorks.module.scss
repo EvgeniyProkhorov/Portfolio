@@ -1,7 +1,7 @@
 @import '../common/styles/sass/variables';
 
 .worksBlock {
-  /*min-height: 100vh;*/
+  //min-height: 100vh;
   background-color: $mainBgColor;
   padding: 100px 0;
 
@@ -11,7 +11,7 @@
     justify-content: flex-start;
 
     .projects {
-      border: 1px solid;
+      //border: 1px solid;
       width: 100%;
       display: flex;
       justify-content: space-between;

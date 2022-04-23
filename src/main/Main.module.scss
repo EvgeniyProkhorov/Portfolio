@@ -6,10 +6,10 @@
   background-color: $mainBgColor;
 
   .text {
-    @include text($titleFontFamily, 18px, 500, 1.2, #999);
+    @include text($titleFontFamily, 18px, 500, 1.2, $headersColor);
     width: 300px;
     /*background-color: grey;*/
-    background-color: $mainBgColor;
+    //background-color: $mainBgColor;
     padding: 0;
     text-transform: uppercase;
     margin: 0 0 8px;
@@ -21,5 +21,4 @@
   height: 400px;
   /*background-color: grey;*/
   background-color: $secondBgColor;
-
 }
