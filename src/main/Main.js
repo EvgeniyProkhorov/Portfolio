@@ -24,7 +24,7 @@ const Main = () => {
                        loaded={particlesLoaded}
                        options={{
                            style: {
-                               position: "absolute",
+                               // position: "absolute",
                                top: 0,
                                left: 0,
                                bottom: 0,

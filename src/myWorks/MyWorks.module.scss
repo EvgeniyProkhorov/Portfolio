@@ -2,17 +2,17 @@
 @import '../common/styles/sass/mixins';
 
 .worksBlock {
-  //min-height: 100vh;
+  min-height: 100vh;
   @include flex(row, center, center, nowrap);
   background-color: $mainBgColor;
   padding: 100px 0;
 
   .container {
+    z-index: 10;
     @include container();
     @include flex(row, center, center, wrap);
 
     .projects {
-      //border: 1px solid;
       width: 100%;
       display: flex;
       justify-content: space-between;

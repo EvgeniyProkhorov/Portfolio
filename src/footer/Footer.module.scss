@@ -13,11 +13,14 @@
   @include flex(column, center, center, wrap);
 
   .title {
+    z-index: 10;
+
     color: $goldColor;
     margin: 5px 0;
   }
 
   .socialIcons {
+    z-index: 10;
     /*height: 60px;*/
     /*width: 250px;*/
     /*min-width: 50%;*/
