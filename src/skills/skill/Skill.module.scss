@@ -16,7 +16,7 @@
   }
 
   .skillTitle {
-    @include text($titleFontFamily, 23px, 400, 1.2, $headersColor);
+    @include text($titleFontFamily, 23px, 400, 1.2, $textColor);
   }
 
   .description {

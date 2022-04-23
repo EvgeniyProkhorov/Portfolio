@@ -51,7 +51,7 @@
     padding: 25px 20px;
 
     .projectTitle {
-      @include text($titleFontFamily, 30px, 400, 1.2, $headersColor);
+      @include text($titleFontFamily, 30px, 400, 1.2, $textColor);
       margin: 0 0 18px;
       padding: 0;
     }
