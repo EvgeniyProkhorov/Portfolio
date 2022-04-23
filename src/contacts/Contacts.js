@@ -7,7 +7,7 @@ import {Title} from "../common/components/title/Title";
 const Contacts = () => {
     return (
         <div className={css.contactsBlock}>
-            <div className={`${css.container} ${css.container}`}>
+            <div className={css.container}>
                 <Title title={'Contacts'}/>
                 <Form/>
                 <button className={css.submitButton}>Submit</button>

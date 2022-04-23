@@ -8,7 +8,7 @@
 
   .container {
     @include container();
-    @include flex(row, center, center, wrap);
+    @include flex(row, space-between, center, wrap);
 
     .text {
       @include text($titleFontFamily, 18px, 500, 1.2, $headersColor);
@@ -22,6 +22,10 @@
       width: 300px;
       height: 400px;
       background-color: $secondBgColor;
+    }
+
+    @media screen and (max-width: 749px) {
+      justify-content: center;
     }
   }
 }
