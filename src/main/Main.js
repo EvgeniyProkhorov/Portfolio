@@ -1,7 +1,32 @@
 import React from "react";
 import css from './Main.module.scss'
+import {motion} from 'framer-motion'
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
+
+const textAnimation = {
+    hidden: {
+        x: -200,
+        opacity: 0,
+    },
+    visible: custom => ({
+        x: 0,
+        opacity: 1,
+        transition: {delay: custom * 0.2}
+    })
+}
+const photoAnimation = {
+    hidden: {
+        x: 200,
+        opacity: 0,
+    },
+    visible: custom => ({
+        x: 0,
+        opacity: 1,
+        transition: {delay: custom * 0.2}
+    })
+}
+
 
 const Main = () => {
     const particlesInit = async (main) => {
@@ -25,22 +50,20 @@ const Main = () => {
                        options={{
                            style: {
                                // position: "absolute",
-                               top: 0,
-                               left: 0,
-                               bottom: 0,
-                               right: 0,
+                               // width: "100%",
+                               // height: "2160px",
                            },
                            fpsLimit: 60,
                            particles: {
                                number: {
-                                   value: 500,
+                                   value: 600,
                                    density: {
                                        enable: true,
                                        area: 800
                                    }
                                },
                                color: {
-                                   value: ["#987750"]
+                                   value: ["#987750", "#fff"]
                                },
                                shape: {
                                    type: "circle"
@@ -49,10 +72,10 @@ const Main = () => {
                                    value: 0.8
                                },
                                size: {
-                                   value: 3,
+                                   value: 6,
                                    random: {
                                        enable: true,
-                                       minimumValue: 1
+                                       minimumValue: 4
                                    }
                                },
                                move: {
@@ -73,7 +96,7 @@ const Main = () => {
                                    trail: {
                                        enable: true,
                                        length: 25,
-                                       fillColor: "#1d1b19"
+                                       // fillColor: "#1d1b19"
                                    },
                                    warp: true
                                }
@@ -89,7 +112,7 @@ const Main = () => {
                                },
                                modes: {
                                    push: {
-                                       quantity: 4
+                                       quantity: 5
                                    }
                                }
                            },
@@ -115,14 +138,23 @@ const Main = () => {
                            }
                        }}
             />
-            <div className={css.container}>
-                <div className={css.text}>
+            <motion.div className={css.container}
+                        initial='hidden'
+                        whileInView='visible'
+            >
+                <motion.div className={css.text}
+                            custom={1}
+                            variants={textAnimation}
+                >
                     <span>Hi There</span>
                     <h1>I am Evgeniy Prokhorov</h1>
                     <p>Frontend Developer</p>
-                </div>
-                <div className={css.photo}></div>
-            </div>
+                </motion.div>
+                <motion.div className={css.photo}
+                            custom={2}
+                            variants={photoAnimation}
+                ></motion.div>
+            </motion.div>
         </div>
     )
 }
