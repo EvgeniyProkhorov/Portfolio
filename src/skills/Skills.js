@@ -77,7 +77,7 @@ const skillAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {delay: custom * 0.1}
+        transition: {delay: custom * 0.2}
     })
 }
 
@@ -89,7 +89,7 @@ const Skills = () => {
                 <MTitle title={"My Skills"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={1}
+                        custom={0}
                         variants={textAnimation}
                         viewport={{amount: 0.2, once: true}}
                 />
@@ -98,11 +98,12 @@ const Skills = () => {
                             whileInView='visible'
                             viewport={{amount: 0.2, once: true}}>
                     {skills.map((el, index) => {
-                        return <MSkill title={el.title}
+                        return <MSkill key={`${index}_A`}
+                                       title={el.title}
                                        img={el.img}
                                        initial='hidden'
                                        whileInView='visible'
-                                       custom={index}
+                                       custom={(index + 1) / 2}
                                        variants={skillAnimation}
                                        viewport={{amount: 0.2, once: true}}
                         />

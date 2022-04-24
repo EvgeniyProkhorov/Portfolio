@@ -5,8 +5,8 @@ import Nav from "../nav/Nav";
 
 const textAnimation = {
     hidden: {
-        x: 400,
-        opacity: 0.5,
+        x: 200,
+        opacity: 0,
     },
     visible: custom => ({
         x: 0,
