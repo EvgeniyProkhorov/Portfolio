@@ -52,6 +52,7 @@ const Main = () => {
                                // position: "absolute",
                                // width: "100%",
                                // height: "2160px",
+                               // opacity: 0.3,
                            },
                            fpsLimit: 60,
                            particles: {
