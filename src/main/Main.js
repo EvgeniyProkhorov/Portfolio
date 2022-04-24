@@ -1,6 +1,6 @@
 import React from "react";
-import css from './Main.module.scss'
-import {motion} from 'framer-motion'
+import css from './Main.module.scss';
+import {motion} from 'framer-motion';
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
 
@@ -138,23 +138,25 @@ const Main = () => {
                            }
                        }}
             />
-            <motion.div className={css.container}
-                        initial='hidden'
-                        whileInView='visible'
-            >
+            <div className={css.container}>
                 <motion.div className={css.text}
-                            custom={1}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={3}
                             variants={textAnimation}
-                >
+                            viewport={{amount: 0.2, once: true}}>
                     <span>Hi There</span>
                     <h1>I am Evgeniy Prokhorov</h1>
                     <p>Frontend Developer</p>
                 </motion.div>
                 <motion.div className={css.photo}
-                            custom={2}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={4}
                             variants={photoAnimation}
+                            viewport={{amount: 0.2, once: true}}
                 ></motion.div>
-            </motion.div>
+            </div>
         </div>
     )
 }

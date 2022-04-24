@@ -1,15 +1,16 @@
-import React from "react";
-import css from './Skill.module.scss'
+import React, {forwardRef} from "react";
+import css from './Skill.module.scss';
+import {motion} from 'framer-motion';
 
 
-const Skill = (props) => {
+export const Skill = forwardRef((props, ref) => {
     return (
-        <div className={css.skill}>
+        <div className={css.skill} ref={ref}>
             <img src={props.img} className={css.icon}></img>
             <h3 className={css.skillTitle}>{props.title}</h3>
-            <span className={css.description}>{props.description}</span>
+            {/*<span className={css.description}>{props.description}</span>*/}
         </div>
     )
-}
+})
 
-export default Skill;
+export const MSkill = motion(Skill)
