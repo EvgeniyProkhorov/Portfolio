@@ -1,12 +1,29 @@
-import React, {forwardRef} from "react";
+import React from "react";
 import css from './Project.module.scss';
 import {motion} from 'framer-motion';
 
+const blockAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: {duration: custom }
+    })
+}
 
 
-export const Project = forwardRef((props, ref) => {
+export const Project = (props) => {
     return (
-        <div className={css.project}>
+        <motion.div className={css.project}
+                    initial='hidden'
+                    whileInView='visible'
+                    custom={props.duration}
+                    variants={blockAnimation}
+                    viewport={{amount: 0.1, once: true}}
+        >
             <div className={css.image} style={props.style}>
                 <a className={css.viewBtn}>Смотреть</a>
             </div>
@@ -14,8 +31,6 @@ export const Project = forwardRef((props, ref) => {
                 <h3 className={css.projectTitle}>{props.projectTitle}</h3>
                 <span className={css.description}>{props.description}</span>
             </div>
-        </div>
+        </motion.div>
     )
-})
-
-export const MProject = motion(Project)
+}

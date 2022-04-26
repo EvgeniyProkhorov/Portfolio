@@ -77,7 +77,7 @@ const blockAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: custom
+        transition: {duration: custom}
     })
 }
 

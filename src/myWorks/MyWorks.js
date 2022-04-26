@@ -1,7 +1,7 @@
 import React from "react";
 import css from './MyWorks.module.scss';
 import {motion} from 'framer-motion';
-import Project, {MProject} from "./Project/Project";
+import {Project} from "./Project/Project";
 import {MTitle} from "../common/components/title/Title";
 import socialNet from "../assets/images/2_Building-Application-with-React-JS.png";
 import todoList from "../assets/images/Todo-List-board.jpeg";
@@ -14,7 +14,7 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -26,21 +26,7 @@ const blockAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: custom
-    })
-}
-
-const projectAnimation = {
-    hidden: {
-        y: 100,
-        opacity: 0,
-    },
-    visible: custom => ({
-        y: 0,
-        opacity: 1,
-        // transition: {delay: custom * 0.1}
-        transition: {duration: (custom + 2) * 0.2}
-
+        transition: {duration: custom}
     })
 }
 
@@ -70,25 +56,33 @@ const MyWorks = () => {
                         initial='hidden'
                         whileInView='visible'
                         custom={2}
-                        variants={projectAnimation}
+                        variants={textAnimation}
                         viewport={{amount: 0.1, once: true}}
                 />
-                <div className={css.projects}>
-                    <MProject style={social}
+                <motion.div className={css.projects}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={3}
+                            variants={blockAnimation}
+                            viewport={{amount: 0.1, once: true}}
+                >
+                    <Project style={social}
                              projectTitle={'Social Network'}
                              description={"Project on Typescript/React/Redux"}
-                              initial='hidden'
-                              whileInView='visible'
-                              custom={2}
-                              variants={textAnimation}
-                              viewport={{amount: 0.2, once: true}}
+                             duration={0.5}
                     />
-                    <MProject style={todo}
+                    <Project style={todo}
                              projectTitle={'Todo List'}
-                             description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}/>
-                    <MProject projectTitle={'React Pizza'}
-                             description={"Project on Typescript/React/Redux"}/>
-                </div>
+                             description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}
+                             duration={1}
+
+                    />
+                    <Project projectTitle={'React Pizza'}
+                             description={"Project on Typescript/React/Redux"}
+                             duration={1.5}
+
+                    />
+                </motion.div>
             </div>
         </motion.div>
     )
