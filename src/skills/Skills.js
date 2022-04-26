@@ -59,15 +59,28 @@ const skills = [
 
 const textAnimation = {
     hidden: {
-        y: 200,
+        y: 100,
         opacity: 0,
     },
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {delay: custom * 0.2}
+        transition: {duration: custom * 0.2}
     })
 }
+
+const blockAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: custom
+    })
+}
+
 
 const skillAnimation = {
     hidden: {
@@ -77,33 +90,41 @@ const skillAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {delay: custom * 0.2}
+        // transition: {delay: custom * 0.1}
+        transition: {duration: (custom + 2) * 0.2}
+
     })
 }
 
 
 const Skills = () => {
     return (
-        <div className={css.skillsBlock}>
+        <motion.div className={css.skillsBlock}
+                    initial='hidden'
+                    whileInView='visible'
+                    custom={1}
+                    variants={blockAnimation}
+                    viewport={{amount: 0.1, once: true}}
+        >
             <div className={css.container}>
                 <MTitle title={"My Skills"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={0}
+                        custom={2}
                         variants={textAnimation}
-                        viewport={{amount: 0.2, once: true}}
+                        viewport={{amount: 0.1, once: true}}
                 />
                 <motion.div className={css.skills}
                             initial='hidden'
                             whileInView='visible'
-                            viewport={{amount: 0.2, once: true}}>
+                            viewport={{amount: 0.3, once: true}}>
                     {skills.map((el, index) => {
                         return <MSkill key={`${index}_A`}
                                        title={el.title}
                                        img={el.img}
                                        initial='hidden'
                                        whileInView='visible'
-                                       custom={(index + 1) / 2}
+                                       custom={index === 0 ? 0.5 : index}
                                        variants={skillAnimation}
                                        viewport={{amount: 0.2, once: true}}
                         />
@@ -111,7 +132,7 @@ const Skills = () => {
                 </motion.div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

@@ -5,6 +5,18 @@ import {Title} from "../common/components/title/Title";
 import socialNet from "../assets/images/2_Building-Application-with-React-JS.png"
 import todoList from "../assets/images/Todo-List-board.jpeg"
 
+const blockAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: custom
+    })
+}
+
 
 const MyWorks = () => {
     const social = {
@@ -20,7 +32,7 @@ const MyWorks = () => {
     }
 
     return (
-        <div className={css.worksBlock}>
+        <motion.div className={css.worksBlock}>
             <div className={css.container}>
                 <Title title={"My Works"}/>
                 <div className={css.projects}>
@@ -42,7 +54,7 @@ const MyWorks = () => {
                     {/*         description={"Project on Typescript/React/Redux"}/>*/}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

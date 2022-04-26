@@ -3,6 +3,7 @@
 
 
 .skillsBlock {
+  position: relative;
   @include flex(row, center, center, nowrap);
   min-height: 100vh;
   background-color: $secondBgColor;

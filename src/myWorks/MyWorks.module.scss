@@ -2,6 +2,7 @@
 @import '../common/styles/sass/mixins';
 
 .worksBlock {
+  position: relative;
   min-height: 100vh;
   @include flex(row, center, center, nowrap);
   background-color: $mainBgColor;
