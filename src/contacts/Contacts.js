@@ -1,18 +1,48 @@
 import React from "react";
-import css from './Contacts.module.scss'
+import css from './Contacts.module.scss';
+import {motion} from 'framer-motion';
 import Form from "./Form/Form";
-import {Title} from "../common/components/title/Title";
+import {MTitle} from "../common/components/title/Title";
 
+const textAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: {duration: custom}
+    })
+}
+
+const blockAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: {duration: custom}
+    })
+}
 
 const Contacts = () => {
     return (
-        <div className={css.contactsBlock}>
+        <motion.div className={css.contactsBlock}
+                    initial='hidden'
+                    whileInView='visible'
+                    custom={1}
+                    variants={blockAnimation}
+                    viewport={{amount: 'some', once: true}}
+        >
             <div className={css.container}>
-                <Title title={'Contacts'}/>
+                <MTitle title={"Contacts"}/>
                 <Form/>
-                <button className={css.submitButton}>Submit</button>
+                <motion.button className={css.submitButton}>Submit</motion.button>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

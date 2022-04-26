@@ -49,23 +49,17 @@ const MyWorks = () => {
                     whileInView='visible'
                     custom={1}
                     variants={blockAnimation}
-                    viewport={{amount: 0.1, once: true}}
+                    viewport={{amount: 'some', once: true}}
         >
             <div className={css.container}>
                 <MTitle title={"My Works"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={2}
+                        custom={1}
                         variants={textAnimation}
                         viewport={{amount: 0.1, once: true}}
                 />
-                <motion.div className={css.projects}
-                            initial='hidden'
-                            whileInView='visible'
-                            custom={3}
-                            variants={blockAnimation}
-                            viewport={{amount: 0.1, once: true}}
-                >
+                <div className={css.projects}>
                     <Project style={social}
                              projectTitle={'Social Network'}
                              description={"Project on Typescript/React/Redux"}
@@ -74,15 +68,15 @@ const MyWorks = () => {
                     <Project style={todo}
                              projectTitle={'Todo List'}
                              description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}
-                             duration={1}
+                             duration={0.9}
 
                     />
-                    <Project projectTitle={'React Pizza'}
+                    <Project projectTitle={'Cards App'}
                              description={"Project on Typescript/React/Redux"}
-                             duration={1.5}
+                             duration={1.3}
 
                     />
-                </motion.div>
+                </div>
             </div>
         </motion.div>
     )

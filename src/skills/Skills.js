@@ -104,7 +104,7 @@ const Skills = () => {
                     whileInView='visible'
                     custom={1}
                     variants={blockAnimation}
-                    viewport={{amount: 0.1, once: true}}
+                    viewport={{amount: 'some', once: true}}
         >
             <div className={css.container}>
                 <MTitle title={"My Skills"}
