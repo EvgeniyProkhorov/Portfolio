@@ -2,9 +2,10 @@
 @import '../common/styles/sass/mixins';
 
 .footer {
+  position: relative;
   /*height: 30vh;*/
   min-width: 50%;
-  background-color: $secondBgColor;
+  background-color: $footerBgColor;
   padding: 50px 0;
 }
 
