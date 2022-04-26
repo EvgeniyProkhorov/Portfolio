@@ -14,7 +14,7 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom}
+        transition: {duration: custom * 0.2}
     })
 }
 
@@ -55,7 +55,7 @@ const MyWorks = () => {
                 <MTitle title={"My Works"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={1}
+                        custom={2}
                         variants={textAnimation}
                         viewport={{amount: 0.1, once: true}}
                 />

@@ -12,9 +12,10 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom}
+        transition: {duration: custom * 0.2}
     })
 }
+
 
 const blockAnimation = {
     hidden: {
@@ -38,7 +39,13 @@ const Contacts = () => {
                     viewport={{amount: 'some', once: true}}
         >
             <div className={css.container}>
-                <MTitle title={"Contacts"}/>
+                <MTitle title={"Contacts"}
+                        initial='hidden'
+                        whileInView='visible'
+                        custom={2}
+                        variants={textAnimation}
+                        viewport={{amount: 0.1, once: true}}
+                />
                 <Form/>
                 <motion.button className={css.submitButton}>Submit</motion.button>
             </div>
