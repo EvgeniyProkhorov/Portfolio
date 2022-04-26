@@ -1,8 +1,10 @@
-import React from "react";
-import css from './Project.module.scss'
+import React, {forwardRef} from "react";
+import css from './Project.module.scss';
+import {motion} from 'framer-motion';
 
 
-const Project = (props) => {
+
+export const Project = forwardRef((props, ref) => {
     return (
         <div className={css.project}>
             <div className={css.image} style={props.style}>
@@ -14,6 +16,6 @@ const Project = (props) => {
             </div>
         </div>
     )
-}
+})
 
-export default Project;
+export const MProject = motion(Project)

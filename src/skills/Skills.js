@@ -81,7 +81,6 @@ const blockAnimation = {
     })
 }
 
-
 const skillAnimation = {
     hidden: {
         y: 100,
@@ -91,7 +90,8 @@ const skillAnimation = {
         y: 0,
         opacity: 1,
         // transition: {delay: custom * 0.1}
-        transition: {duration: (custom + 2) * 0.2}
+        // transition: {duration: (custom + 1) * 0.2}
+        transition: {duration: (custom / 10) + 0.4}
 
     })
 }
@@ -124,7 +124,7 @@ const Skills = () => {
                                        img={el.img}
                                        initial='hidden'
                                        whileInView='visible'
-                                       custom={index === 0 ? 0.5 : index}
+                                       custom={index === 0 ? 0.8 : index}
                                        variants={skillAnimation}
                                        viewport={{amount: 0.2, once: true}}
                         />
