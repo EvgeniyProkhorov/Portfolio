@@ -14,7 +14,7 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -47,7 +47,7 @@ const MyWorks = () => {
         <motion.div className={css.worksBlock}
                     initial='hidden'
                     whileInView='visible'
-                    custom={1}
+                    custom={0.9}
                     variants={blockAnimation}
                     viewport={{amount: 'some', once: true}}
         >
@@ -55,7 +55,7 @@ const MyWorks = () => {
                 <MTitle title={"My Works"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={2}
+                        custom={0.9}
                         variants={textAnimation}
                         viewport={{amount: 0.1, once: true}}
                 />
@@ -63,17 +63,17 @@ const MyWorks = () => {
                     <Project style={social}
                              projectTitle={'Social Network'}
                              description={"Project on Typescript/React/Redux"}
-                             duration={0.5}
+                             duration={0.9}
                     />
                     <Project style={todo}
                              projectTitle={'Todo List'}
                              description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}
-                             duration={0.9}
+                             duration={1.3}
 
                     />
                     <Project projectTitle={'Cards App'}
                              description={"Project on Typescript/React/Redux"}
-                             duration={1.3}
+                             duration={1.7}
 
                     />
                 </div>

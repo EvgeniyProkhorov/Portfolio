@@ -65,7 +65,7 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -83,12 +83,10 @@ const blockAnimation = {
 
 const skillAnimation = {
     hidden: {
-        x: -100,
         y: 100,
         opacity: 0,
     },
     visible: custom => ({
-        x: 0,
         y: 0,
         opacity: 1,
         // transition: {delay: custom * 0.1}
@@ -104,7 +102,7 @@ const Skills = () => {
         <motion.div className={css.skillsBlock}
                     initial='hidden'
                     whileInView='visible'
-                    custom={1}
+                    custom={0.9}
                     variants={blockAnimation}
                     viewport={{amount: 'some', once: true}}
         >
@@ -112,7 +110,7 @@ const Skills = () => {
                 <MTitle title={"My Skills"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={2}
+                        custom={0.9}
                         variants={textAnimation}
                         viewport={{amount: 0.1, once: true}}
                 />

@@ -12,7 +12,7 @@ const textAnimation = {
     visible: custom => ({
         y: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -28,13 +28,22 @@ const blockAnimation = {
         transition: {duration: custom}
     })
 }
+const buttonAnimation = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: custom => ({
+        opacity: 1,
+        transition: {duration: custom}
+    })
+}
 
 const Contacts = () => {
     return (
         <motion.div className={css.contactsBlock}
                     initial='hidden'
                     whileInView='visible'
-                    custom={1}
+                    custom={0.9}
                     variants={blockAnimation}
                     viewport={{amount: 'some', once: true}}
         >
@@ -42,12 +51,17 @@ const Contacts = () => {
                 <MTitle title={"Contacts"}
                         initial='hidden'
                         whileInView='visible'
-                        custom={2}
+                        custom={0.9}
                         variants={textAnimation}
-                        viewport={{amount: 0.1, once: true}}
+                        viewport={{amount: 'some', once: true}}
                 />
                 <Form/>
-                <motion.button className={css.submitButton}>Submit</motion.button>
+                <motion.button className={css.submitButton}
+                               initial='hidden'
+                               whileInView='visible'
+                               custom={2}
+                               variants={buttonAnimation}
+                               viewport={{amount: 'some', once: true}}>Submit</motion.button>
             </div>
         </motion.div>
     )

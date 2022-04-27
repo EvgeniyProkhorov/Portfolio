@@ -11,7 +11,7 @@ const textAnimation = {
     visible: custom => ({
         x: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -21,9 +21,9 @@ const Header = () => {
         <motion.div className={css.header}
              initial='hidden'
              whileInView='visible'
-             custom={2}
+             custom={0.5}
              variants={textAnimation}
-             viewport={{amount: 0.2, once: true}}
+             viewport={{amount: 0.1, once: true}}
         >
             <Nav/>
         </motion.div>

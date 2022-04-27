@@ -6,24 +6,24 @@ import {loadFull} from "tsparticles";
 
 const textAnimation = {
     hidden: {
-        x: -200,
+        x: -100,
         opacity: 0,
     },
     visible: custom => ({
         x: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 const photoAnimation = {
     hidden: {
-        x: 200,
+        x: 100,
         opacity: 0,
     },
     visible: custom => ({
         x: 0,
         opacity: 1,
-        transition: {duration: custom * 0.2}
+        transition: {duration: custom}
     })
 }
 
@@ -143,9 +143,9 @@ const Main = () => {
                 <motion.div className={css.text}
                             initial='hidden'
                             whileInView='visible'
-                            custom={3}
+                            custom={0.9}
                             variants={textAnimation}
-                            viewport={{amount: 0.2, once: true}}>
+                            viewport={{amount: 0.1, once: true}}>
                     <span>Hi There</span>
                     <h1>I am Evgeniy Prokhorov</h1>
                     <p>Frontend Developer</p>
@@ -153,9 +153,9 @@ const Main = () => {
                 <motion.div className={css.photo}
                             initial='hidden'
                             whileInView='visible'
-                            custom={4}
+                            custom={1.3}
                             variants={photoAnimation}
-                            viewport={{amount: 0.2, once: true}}
+                            viewport={{amount: 0.1, once: true}}
                 ></motion.div>
             </div>
         </div>
