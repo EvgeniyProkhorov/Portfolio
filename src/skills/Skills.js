@@ -112,12 +112,9 @@ const Skills = () => {
                         whileInView='visible'
                         custom={0.9}
                         variants={textAnimation}
-                        viewport={{amount: 0.1, once: true}}
+                        viewport={{amount: 'some', once: true}}
                 />
-                <motion.div className={css.skills}
-                            initial='hidden'
-                            whileInView='visible'
-                            viewport={{amount: 0.3, once: true}}>
+                <motion.div className={css.skills}>
                     {skills.map((el, index) => {
                         return <MSkill key={`${index}_A`}
                                        title={el.title}
@@ -126,7 +123,7 @@ const Skills = () => {
                                        whileInView='visible'
                                        custom={index === 0 ? 0.8 : index}
                                        variants={skillAnimation}
-                                       viewport={{amount: 0.2, once: true}}
+                                       viewport={{amount: 'some', once: true}}
                         />
                     })}
                 </motion.div>

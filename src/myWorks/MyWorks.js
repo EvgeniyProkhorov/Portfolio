@@ -57,7 +57,7 @@ const MyWorks = () => {
                         whileInView='visible'
                         custom={0.9}
                         variants={textAnimation}
-                        viewport={{amount: 0.1, once: true}}
+                        viewport={{amount: 'some', once: true}}
                 />
                 <div className={css.projects}>
                     <Project style={social}

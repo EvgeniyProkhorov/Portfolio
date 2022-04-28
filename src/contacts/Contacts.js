@@ -59,7 +59,7 @@ const Contacts = () => {
                 <motion.button className={css.submitButton}
                                initial='hidden'
                                whileInView='visible'
-                               custom={2}
+                               custom={1.5}
                                variants={buttonAnimation}
                                viewport={{amount: 'some', once: true}}>Submit</motion.button>
             </div>
