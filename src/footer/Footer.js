@@ -38,7 +38,13 @@ const Footer = () => {
     return (
         <div className={css.footer}>
             <div className={css.container}>
-                <h2 className={css.title}>Evgeniy Prokhorov</h2>
+                <motion.h2 className={css.title}
+                           initial='hidden'
+                           whileInView='visible'
+                           custom={0.5}
+                           variants={textAnimation}
+                           viewport={{amount: 'some', once: true}}>Evgeniy Prokhorov
+                </motion.h2>
                 <div className={css.socialIcons}>
                     <motion.a target={'_blank'} href={''}
                               initial='hidden'
@@ -62,7 +68,11 @@ const Footer = () => {
                               viewport={{amount: 'some', once: true}}><img className={css.socialIcon} src={gitHubIcon}
                                                                            alt={'GitHub'}/></motion.a>
                 </div>
-                <span className={css.title}> 2022 copyright</span>
+                <motion.span className={css.title}
+                             initial={{opacity: 0}}
+                             whileInView={{opacity: 1, transition: {duration: 2}}}
+                             viewport={{amount: 'some', once: true}}> 2022 copyright
+                </motion.span>
             </div>
         </div>
     )
