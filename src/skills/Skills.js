@@ -121,7 +121,7 @@ const Skills = () => {
                                        img={el.img}
                                        initial='hidden'
                                        whileInView='visible'
-                                       custom={index === 0 ? 0.8 : index}
+                                       custom={index === 0 ? 1 : index}
                                        variants={skillAnimation}
                                        viewport={{amount: 'some', once: true}}
                         />

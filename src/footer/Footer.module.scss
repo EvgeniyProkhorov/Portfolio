@@ -2,6 +2,7 @@
 @import '../common/styles/sass/mixins';
 
 .footer {
+  overflow: hidden;
   position: relative;
   /*height: 30vh;*/
   min-width: 50%;

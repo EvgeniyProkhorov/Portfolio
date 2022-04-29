@@ -11,24 +11,12 @@ const gitHub = 'https://github.com/EvgeniyProkhorov'
 const textAnimation = {
     hidden: {
         x: -100,
-        y: 100,
+        y: 50,
         opacity: 0,
     },
     visible: custom => ({
         x: 0,
         y: 0,
-        opacity: 1,
-        transition: {duration: custom}
-    })
-}
-
-const blockAnimation = {
-    hidden: {
-        x: -300,
-        opacity: 0,
-    },
-    visible: custom => ({
-        x: 0,
         opacity: 1,
         transition: {duration: custom}
     })
