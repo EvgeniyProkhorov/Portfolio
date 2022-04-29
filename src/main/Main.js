@@ -17,11 +17,11 @@ const textAnimation = {
 }
 const photoAnimation = {
     hidden: {
-        x: 100,
+        scale: 0,
         opacity: 0,
     },
     visible: custom => ({
-        x: 0,
+        scale: 1,
         opacity: 1,
         transition: {duration: custom}
     })
