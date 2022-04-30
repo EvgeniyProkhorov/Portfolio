@@ -44,7 +44,8 @@ const MyWorks = () => {
     }
 
     return (
-        <motion.div className={css.worksBlock}
+        <motion.div id='projects'
+                    className={css.worksBlock}
                     initial='hidden'
                     whileInView='visible'
                     custom={0.9}

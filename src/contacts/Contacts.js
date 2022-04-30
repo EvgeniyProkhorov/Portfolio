@@ -40,7 +40,8 @@ const buttonAnimation = {
 
 const Contacts = () => {
     return (
-        <motion.div className={css.contactsBlock}
+        <motion.div id='contacts'
+                    className={css.contactsBlock}
                     initial='hidden'
                     whileInView='visible'
                     custom={0.9}
@@ -61,7 +62,8 @@ const Contacts = () => {
                                whileInView='visible'
                                custom={1.5}
                                variants={buttonAnimation}
-                               viewport={{amount: 'some', once: true}}>Submit</motion.button>
+                               viewport={{amount: 'some', once: true}}>Submit
+                </motion.button>
             </div>
         </motion.div>
     )

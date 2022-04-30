@@ -54,7 +54,8 @@ const Main = () => {
     };
 
     return (
-        <div className={css.mainBlock}>
+        <div id='main'
+             className={css.mainBlock}>
             <Particles id="tsparticles"
                        init={particlesInit}
                        loaded={particlesLoaded}

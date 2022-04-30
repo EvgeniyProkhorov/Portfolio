@@ -6,14 +6,31 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  .navBtn {
+  a {
     text-decoration: none;
     color: $textColor;
-    background-color: transparent;
     transition: all .5s ease;
+
     &:hover {
       cursor: pointer;
       color: $goldColor;
     }
   }
+
+  .active {
+    text-decoration: none;
+    color: $goldColor;
+  }
+
+  //.navBtn {
+  //  text-decoration: none;
+  //  color: $textColor;
+  //  background-color: transparent;
+  //  transition: all .5s ease;
+  //
+  //  &:hover {
+  //    cursor: pointer;
+  //    color: $goldColor;
+  //  }
+  //}
 }

@@ -99,7 +99,8 @@ const skillAnimation = {
 
 const Skills = () => {
     return (
-        <motion.div className={css.skillsBlock}
+        <motion.div id='skills'
+                    className={css.skillsBlock}
                     initial='hidden'
                     whileInView='visible'
                     custom={0.9}
