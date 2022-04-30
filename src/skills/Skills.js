@@ -99,38 +99,40 @@ const skillAnimation = {
 
 const Skills = () => {
     return (
-        <motion.div id='skills'
-                    className={css.skillsBlock}
-                    initial='hidden'
-                    whileInView='visible'
-                    custom={0.9}
-                    variants={blockAnimation}
-                    viewport={{amount: 'some', once: true}}
-        >
-            <div className={css.container}>
-                <MTitle title={"My Skills"}
-                        initial='hidden'
-                        whileInView='visible'
-                        custom={0.9}
-                        variants={textAnimation}
-                        viewport={{amount: 'some', once: true}}
-                />
-                <motion.div className={css.skills}>
-                    {skills.map((el, index) => {
-                        return <MSkill key={`${index}_A`}
-                                       title={el.title}
-                                       img={el.img}
-                                       initial='hidden'
-                                       whileInView='visible'
-                                       custom={index === 0 ? 1 : index}
-                                       variants={skillAnimation}
-                                       viewport={{amount: 'some', once: true}}
-                        />
-                    })}
-                </motion.div>
-            </div>
+        <div id='skills'>
+            <motion.div
+                className={css.skillsBlock}
+                initial='hidden'
+                whileInView='visible'
+                custom={0.9}
+                variants={blockAnimation}
+                viewport={{amount: 'some', once: true}}
+            >
+                <div className={css.container}>
+                    <MTitle title={"My Skills"}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={0.9}
+                            variants={textAnimation}
+                            viewport={{amount: 'some', once: true}}
+                    />
+                    <motion.div className={css.skills}>
+                        {skills.map((el, index) => {
+                            return <MSkill key={`${index}_A`}
+                                           title={el.title}
+                                           img={el.img}
+                                           initial='hidden'
+                                           whileInView='visible'
+                                           custom={index === 0 ? 1 : index}
+                                           variants={skillAnimation}
+                                           viewport={{amount: 'some', once: true}}
+                            />
+                        })}
+                    </motion.div>
+                </div>
 
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 
