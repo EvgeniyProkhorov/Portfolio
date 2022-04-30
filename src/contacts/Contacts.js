@@ -40,32 +40,33 @@ const buttonAnimation = {
 
 const Contacts = () => {
     return (
-        <motion.div id='contacts'
-                    className={css.contactsBlock}
-                    initial='hidden'
-                    whileInView='visible'
-                    custom={0.9}
-                    variants={blockAnimation}
-                    viewport={{amount: 'some', once: true}}
-        >
-            <div className={css.container}>
-                <MTitle title={"Contacts"}
+        <div id='contacts'>
+            <motion.div className={css.contactsBlock}
                         initial='hidden'
                         whileInView='visible'
                         custom={0.9}
-                        variants={textAnimation}
+                        variants={blockAnimation}
                         viewport={{amount: 'some', once: true}}
-                />
-                <Form/>
-                <motion.button className={css.submitButton}
-                               initial='hidden'
-                               whileInView='visible'
-                               custom={1.5}
-                               variants={buttonAnimation}
-                               viewport={{amount: 'some', once: true}}>Submit
-                </motion.button>
-            </div>
-        </motion.div>
+            >
+                <div className={css.container}>
+                    <MTitle title={"Contacts"}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={0.9}
+                            variants={textAnimation}
+                            viewport={{amount: 'some', once: true}}
+                    />
+                    <Form/>
+                    <motion.button className={css.submitButton}
+                                   initial='hidden'
+                                   whileInView='visible'
+                                   custom={1.5}
+                                   variants={buttonAnimation}
+                                   viewport={{amount: 'some', once: true}}>Submit
+                    </motion.button>
+                </div>
+            </motion.div>
+        </div>
     )
 }
 

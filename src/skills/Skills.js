@@ -100,13 +100,12 @@ const skillAnimation = {
 const Skills = () => {
     return (
         <div id='skills'>
-            <motion.div
-                className={css.skillsBlock}
-                initial='hidden'
-                whileInView='visible'
-                custom={0.9}
-                variants={blockAnimation}
-                viewport={{amount: 'some', once: true}}
+            <motion.div className={css.skillsBlock}
+                        initial='hidden'
+                        whileInView='visible'
+                        custom={0.9}
+                        variants={blockAnimation}
+                        viewport={{amount: 'some', once: true}}
             >
                 <div className={css.container}>
                     <MTitle title={"My Skills"}

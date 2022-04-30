@@ -2,9 +2,9 @@
 @import '../common/styles/sass/mixins';
 
 .worksBlock {
+  @include flex(row, center, center, nowrap);
   position: relative;
   min-height: 100vh;
-  @include flex(row, center, center, nowrap);
   background-color: $mainBgColor;
   padding: 50px 0;
 

@@ -3,15 +3,14 @@
 
 
 .skillsBlock {
-  position: relative;
   @include flex(row, center, center, nowrap);
+  position: relative;
   min-height: 100vh;
   background-color: $mainBgColor;
   padding: 50px 0;
 
   .container {
     z-index: 10;
-
     @include container();
     @include flex(row, center, center, wrap);
 

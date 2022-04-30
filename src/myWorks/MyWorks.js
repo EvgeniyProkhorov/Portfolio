@@ -44,42 +44,43 @@ const MyWorks = () => {
     }
 
     return (
-        <motion.div id='projects'
-                    className={css.worksBlock}
-                    initial='hidden'
-                    whileInView='visible'
-                    custom={0.9}
-                    variants={blockAnimation}
-                    viewport={{amount: 'some', once: true}}
-        >
-            <div className={css.container}>
-                <MTitle title={"My Works"}
+        <div id='projects'>
+            <motion.div className={css.worksBlock}
                         initial='hidden'
                         whileInView='visible'
                         custom={0.9}
-                        variants={textAnimation}
+                        variants={blockAnimation}
                         viewport={{amount: 'some', once: true}}
-                />
-                <div className={css.projects}>
-                    <Project style={social}
-                             projectTitle={'Social Network'}
-                             description={"Project on Typescript/React/Redux"}
-                             duration={0.9}
+            >
+                <div className={css.container}>
+                    <MTitle title={"My Works"}
+                            initial='hidden'
+                            whileInView='visible'
+                            custom={0.9}
+                            variants={textAnimation}
+                            viewport={{amount: 'some', once: true}}
                     />
-                    <Project style={todo}
-                             projectTitle={'Todo List'}
-                             description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}
-                             duration={1.3}
+                    <div className={css.projects}>
+                        <Project style={social}
+                                 projectTitle={'Social Network'}
+                                 description={"Project on Typescript/React/Redux"}
+                                 duration={0.9}
+                        />
+                        <Project style={todo}
+                                 projectTitle={'Todo List'}
+                                 description={"Project on Typescript/React/Redux Project on Typescript/React/Redux\""}
+                                 duration={1.3}
 
-                    />
-                    <Project projectTitle={'Cards App'}
-                             description={"Project on Typescript/React/Redux"}
-                             duration={1.7}
+                        />
+                        <Project projectTitle={'Cards App'}
+                                 description={"Project on Typescript/React/Redux"}
+                                 duration={1.7}
 
-                    />
+                        />
+                    </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 
