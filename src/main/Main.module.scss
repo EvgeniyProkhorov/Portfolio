@@ -19,6 +19,9 @@
       padding: 0;
       text-transform: uppercase;
       margin: 0 0 8px;
+      .name {
+        @include text($titleFontFamily, 36px, bold, 1.2, $headersColor);
+      }
     }
 
     .photo {

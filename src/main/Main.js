@@ -15,6 +15,17 @@ const textAnimation = {
         transition: {duration: custom}
     })
 }
+const nameAnimation = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        x: 0,
+        opacity: 1,
+        transition: {delay: custom}
+    })
+}
 const photoAnimation = {
     hidden: {
         x: 100,
@@ -29,14 +40,12 @@ const photoAnimation = {
     })
 }
 
+const name = ['I ', 'A', 'M ', 'E', 'V', 'G', 'E', 'N', 'I', 'Y', ' ', 'P', 'R', 'O', 'K', 'H', 'O', 'R', 'O', 'V']
+
 
 const Main = () => {
     const particlesInit = async (main) => {
         console.log(main);
-
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(main);
     };
 
@@ -145,11 +154,21 @@ const Main = () => {
                 <motion.div className={css.text}
                             initial='hidden'
                             whileInView='visible'
-                            custom={0.9}
+                            custom={0.5}
                             variants={textAnimation}
-                            viewport={{amount: 0.1, once: true}}>
-                    <span>Hi There</span>
-                    <h1>I am Evgeniy Prokhorov</h1>
+                            viewport={{once: true}}
+                >
+                    <span>Hi There</span> <br/>
+                    {name.map((el, index) => {
+                        return <motion.span key={`${index}_C`}
+                                            className={css.name}
+                                            initial='hidden'
+                                            whileInView='visible'
+                                            custom={index * 0.1}
+                                            variants={nameAnimation}
+                                            viewport={{once: true}}>{el}</motion.span>
+                    })}
+                    {/*<h1>I am Evgeniy Prokhorov</h1>*/}
                     <p>Frontend Developer</p>
                 </motion.div>
                 <motion.div className={css.photo}
