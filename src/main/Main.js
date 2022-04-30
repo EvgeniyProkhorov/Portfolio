@@ -62,7 +62,7 @@ const Main = () => {
                                    value: 600,
                                    density: {
                                        enable: true,
-                                       area: 800
+                                       area: 1000,
                                    }
                                },
                                color: {
