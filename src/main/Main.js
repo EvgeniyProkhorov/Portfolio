@@ -124,7 +124,7 @@ const Main = () => {
                                },
                                modes: {
                                    push: {
-                                       quantity: 5
+                                       quantity: 3
                                    }
                                }
                            },
