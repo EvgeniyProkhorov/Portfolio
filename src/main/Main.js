@@ -168,7 +168,6 @@ const Main = () => {
                                             variants={nameAnimation}
                                             viewport={{once: true}}>{el}</motion.span>
                     })}
-                    {/*<h1>I am Evgeniy Prokhorov</h1>*/}
                     <p>Frontend Developer</p>
                 </motion.div>
                 <motion.div className={css.photo}
