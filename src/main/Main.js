@@ -3,6 +3,7 @@ import css from './Main.module.scss';
 import {motion} from 'framer-motion';
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
+import evgenPhoto from '../assets/EvgenPhoto/photo-removebg.png'
 
 const textAnimation = {
     hidden: {
@@ -177,7 +178,7 @@ const Main = () => {
                             custom={1.3}
                             variants={photoAnimation}
                             viewport={{amount: 0.1, once: true}}
-                ></motion.div>
+                ><img className={css.photo} src={evgenPhoto}/></motion.div>
             </div>
         </div>
     )
